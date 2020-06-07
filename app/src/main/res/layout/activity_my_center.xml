@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".f4.MyCenter"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.appcompat.widget.Toolbar
+        app:contentInsetStart="0dp"
+        android:background="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_margin="8dp"
+                android:layout_width="50dp"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="个人中心"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:layout_margin="13dp"
+                android:id="@+id/iv_c1_add"
+                android:src="@drawable/img_add"
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <LinearLayout
+        android:background="@drawable/style_bg"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout_center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlAccentColor="#00000000"
+            app:srlPrimaryColor="#00000000"
+            app:srlEnablePreviewInEditMode="true">
+            <com.scwang.smartrefresh.header.BezierCircleHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:background="@drawable/style_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.google.android.material.appbar.AppBarLayout
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/style_bar_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fitsSystemWindows="true">
+                    <LinearLayout
+                        android:id="@+id/ll_c1_ll"
+                        app:layout_scrollFlags="scroll"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/bg_f4_1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp">
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:layout_margin="30dp"
+                            android:id="@+id/img_c5_img"
+                            android:src="@drawable/img_login_touxiang"
+                            android:layout_gravity="center"
+                            app:riv_oval="true"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp" />
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <!--二维码-->
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+                                <ImageView
+                                    android:layout_marginTop="10dp"
+                                    android:src="@drawable/erweima"
+                                    android:layout_width="20dp"
+                                    android:layout_height="wrap_content" />
+                                <TextView
+                                    android:layout_width="20dp"
+                                    android:layout_height="match_parent" />
+                                <ImageView
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:src="@drawable/right"
+                                    android:layout_width="20dp"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+                            <!--昵称-->
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:id="@+id/tv_c1_name"
+                                    android:gravity="left|center"
+                                    android:text="小西"
+                                    android:textSize="18sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent" />
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <TextView
+
+                                        android:layout_weight="1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent" />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <!--等级-->
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:id="@+id/tv_c1_school"
+                                    android:textSize="12sp"
+                                    android:text="长沙理工大学"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:text="关注："
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent" />
+                            <TextView
+                                android:id="@+id/tv_c1_guanzhu"
+                                android:gravity="center"
+                                android:text="0"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent" />
+                            <TextView
+                                android:gravity="center"
+                                android:text="|"
+                                android:layout_width="10dp"
+                                android:layout_height="match_parent" />
+                            <TextView
+                                android:text="粉丝："
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent" />
+                            <TextView
+                                android:id="@+id/tv_c1_fensi"
+                                android:gravity="center"
+                                android:text="0"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:layout_marginTop="2dp"
+                                android:layout_marginBottom="2dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:background="@drawable/style_c1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent" />
+                                <TextView
+                                    android:text="00后"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_marginTop="2dp"
+                                android:layout_marginBottom="2dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:background="@drawable/style_c2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent" />
+                                <TextView
+                                    android:text="考研"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent" />
+                            </LinearLayout>
+                            <ImageView
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/img_lv1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <!-- 需要监听滚动的控件
+                    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"-->
+                <!--列表-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_margin="4dp"
+                    android:background="@drawable/style_all"
+                    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/recycler_view_center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            <com.scwang.smartrefresh.layout.footer.BallPulseFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

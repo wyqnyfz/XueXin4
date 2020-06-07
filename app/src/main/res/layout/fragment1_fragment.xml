@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.Fragment1">
+
+    <LinearLayout
+        android:background="@drawable/style_bg"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--标题栏-->
+        <LinearLayout
+            app:layout_scrollFlags="scroll"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <LinearLayout
+                android:background="#eeeeee"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+                <LinearLayout
+                    android:background="#ffffff"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <EditText
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/et_f1_search"
+                        android:textSize="14sp"
+                        android:gravity="left|center"
+                        android:layout_width="match_parent"
+                        android:layout_height="59dp"
+                        android:layout_weight="1"
+                        android:hint="如果想考研，请听老学长一席话..." />
+                    <ImageView
+                        android:id="@+id/img_f1_search"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/search" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout_f1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlAccentColor="#00000000"
+            app:srlPrimaryColor="#00000000"
+            app:srlEnablePreviewInEditMode="true">
+            <com.scwang.smartrefresh.header.BezierCircleHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_circle1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.google.android.material.appbar.AppBarLayout
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/style_bar_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fitsSystemWindows="true">
+                    <!--appbarlayout 中  只要标记有
+                       app:layout_scrollFlags="scroll|enterAlways"
+                       在下部的监听滚动控件  上拉时会自动的收缩标记的内容
+                       如果不标记的  则会悬停在顶部-->
+
+                    <!--图+4个图标-->
+                    <LinearLayout
+                        android:layout_margin="2dp"
+                        android:background="@drawable/style_all"
+                        app:layout_scrollFlags="scroll"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <!--轮番图-->
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/vp_1_imgs"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp">
+                        </androidx.viewpager.widget.ViewPager>
+
+                        <!--4个栏-->
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp">
+                            <LinearLayout
+                                android:id="@+id/ll_f1_1"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:layout_weight="1"
+                                    android:layout_margin="14dp"
+                                    android:src="@drawable/img_f1_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+                                <TextView
+                                    android:text="证书攻略"
+                                    android:textSize="10sp"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/ll_f1_2"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:layout_weight="1"
+                                    android:layout_margin="14dp"
+                                    android:src="@drawable/img_f1_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+                                <TextView
+                                    android:text="赛程提醒"
+                                    android:textSize="10sp"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/ll_f1_3"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:layout_weight="1"
+                                    android:layout_margin="14dp"
+                                    android:src="@drawable/img_f1_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+                                <TextView
+                                    android:text="考研干货"
+                                    android:textSize="10sp"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/ll_f1_4"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:layout_weight="1"
+                                    android:layout_margin="14dp"
+                                    android:src="@drawable/img_f1_4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+                                <TextView
+                                    android:text="出国留学"
+                                    android:textSize="10sp"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <!-- 需要监听滚动的控件
+                    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"-->
+                <!--列表-->
+                <androidx.recyclerview.widget.RecyclerView
+                    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/recycler_view_f1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            <com.scwang.smartrefresh.layout.footer.BallPulseFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

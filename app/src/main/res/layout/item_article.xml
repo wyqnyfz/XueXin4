@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_marginTop="2dp"
+    android:id="@+id/ll_ia"
+    android:background="@drawable/style_all"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_weight="5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/iv_ia_img"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/img_f2_z4"
+                    android:layout_gravity="center"
+                    app:riv_oval="true"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:textSize="14sp"
+                    android:id="@+id/tv_ia_title"
+                    android:text="这是标题"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="12dp"
+                    android:id="@+id/tv_ia_content"
+                    android:textSize="12sp"
+                    android:text="内容"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tv_ia_zan"
+                    android:gravity="right|center"
+                    android:layout_weight="1"
+                    android:text="200+"
+                    android:textSize="10sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <ImageView
+                    android:id="@+id/iv_i1_zan"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/dianzan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tv_ia_ping"
+                    android:gravity="right|center"
+                    android:layout_weight="1"
+                    android:text="100+"
+                    android:textSize="10sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <ImageView
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/pinglun"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:gravity="center"
+                    android:textSize="10sp"
+                    android:text="查看详情"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

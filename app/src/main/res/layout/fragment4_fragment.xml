@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.Fragment4">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--个人信息-->
+        <LinearLayout
+            android:layout_margin="4dp"
+            android:background="@drawable/bg_f4_1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+            <LinearLayout
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_margin="30dp"
+                    android:id="@+id/img_f4_img"
+                    android:src="@drawable/img_login_touxiang"
+                    android:layout_gravity="center"
+                    app:riv_oval="true"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <!--二维码-->
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                        <ImageView
+                            android:layout_margin="4dp"
+                            android:src="@drawable/img_f4_shouchang"
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+                    <!--昵称-->
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/tv_f4_name"
+                            android:gravity="left|center"
+                            android:text="小西"
+                            android:textSize="18sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                        <ImageView
+                            android:id="@+id/img_f4_lv"
+                            android:layout_marginLeft="20dp"
+                            android:src="@drawable/img_lv1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+                    <!--等级-->
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/img_my_jingyantiao"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_weight="5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <LinearLayout
+                    android:background="@drawable/bg_f4_2"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp">
+                    <ImageView
+                        android:src="@drawable/quanzi"
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/tv_f4_quanzi"
+                        android:gravity="left|center"
+                        android:text="我的圈子"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+        <!--功能-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_margin="4dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/style_all"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:background="#ffffff"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <ImageView
+                        android:layout_margin="10dp"
+                        android:src="@drawable/img_f5_img1"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:gravity="left|center"
+                        android:text="我的课表"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:background="#ffffff"
+                    android:layout_marginTop="1dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <ImageView
+                        android:layout_margin="10dp"
+                        android:src="@drawable/img_f5_img2"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:gravity="left|center"
+                        android:text="会员中心"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:background="#ffffff"
+                    android:layout_marginTop="1dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <ImageView
+                        android:layout_margin="10dp"
+                        android:src="@drawable/img_f5_img3"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:gravity="left|center"
+                        android:text="我的动态"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:background="#ffffff"
+                    android:layout_marginTop="1dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <ImageView
+                        android:layout_margin="10dp"
+                        android:src="@drawable/img_f5_img4"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:gravity="left|center"
+                        android:text="行程安排"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:background="#ffffff"
+                    android:layout_marginTop="1dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <ImageView
+                        android:layout_margin="10dp"
+                        android:src="@drawable/img_f5_img5"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:gravity="left|center"
+                        android:text="查询"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:background="#ffffff"
+                    android:layout_marginTop="1dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <ImageView
+                        android:layout_margin="10dp"
+                        android:src="@drawable/img_f5_img6"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:gravity="left|center"
+                        android:text="证书"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:background="#ffffff"
+                    android:layout_marginTop="1dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <ImageView
+                        android:layout_margin="10dp"
+                        android:src="@drawable/img_f5_img7"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/tv_f4_m7"
+                        android:gravity="left|center"
+                        android:text="设置"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:background="#ffffff"
+                    android:layout_marginTop="1dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <ImageView
+                        android:layout_margin="10dp"
+                        android:src="@drawable/img_f5_img8"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:gravity="left|center"
+                        android:text="联系我们"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

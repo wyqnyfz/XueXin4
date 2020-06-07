@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".artile.Article">
+
+
+    <!--标题栏-->
+    <androidx.appcompat.widget.Toolbar
+        app:contentInsetEnd="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetLeft="0dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="20sp"
+                android:text="考研干货"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:background="@drawable/style_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_marginTop="2dp"
+            android:background="@drawable/style_bar_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
+            <!--appbarlayout 中  只要标记有
+               app:layout_scrollFlags="scroll|enterAlways"
+               在下部的监听滚动控件  上拉时会自动的收缩标记的内容
+               如果不标记的  则会悬停在顶部-->
+            <ImageView
+                android:layout_marginBottom="4dp"
+                app:layout_scrollFlags="scroll"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_3"
+                android:layout_width="match_parent"
+                android:layout_height="150dp" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- 需要监听滚动的控件
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"-->
+        <!--列表-->
+        <androidx.recyclerview.widget.RecyclerView
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            android:id="@+id/recycler_view_a1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_marginTop="10dp"
+    android:id="@+id/ll_ci1"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <!--头像-->
+            <com.makeramen.roundedimageview.RoundedImageView
+
+                android:id="@+id/img_ci1_img"
+                android:layout_margin="5dp"
+                android:src="@drawable/img_f2_z4"
+                android:layout_gravity="center"
+                app:riv_oval="true"
+                android:layout_width="60dp"
+                android:layout_height="match_parent" />
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tv_ci1_title"
+                    android:gravity="left|center"
+                    android:text="标题"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="10sp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tv_ci1_time"
+                    android:gravity="left|center"
+                    android:text="时间"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <TextView
+            android:textSize="14sp"
+            android:layout_margin="10dp"
+            android:text="内容"
+            android:id="@+id/tv_ci1_content"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="130dp">
+            <ImageView
+                android:scaleType="fitXY"
+                android:layout_margin="4dp"
+                android:id="@+id/iv_ci1_img1"
+                android:layout_weight="1"
+                android:layout_width="50dp"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:scaleType="fitXY"
+                android:layout_margin="4dp"
+                android:id="@+id/iv_ci1_img2"
+                android:layout_weight="1"
+                android:layout_width="50dp"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:scaleType="fitXY"
+                android:layout_margin="4dp"
+                android:id="@+id/iv_ci1_img3"
+                android:layout_weight="1"
+                android:layout_width="50dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/iv_ci1_islike"
+                android:src="@drawable/img_c1_1"
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:textSize="12sp"
+                android:id="@+id/tv_ci1_like"
+                android:gravity="center"
+                android:text="200"
+                android:layout_width="30dp"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:src="@drawable/img_c1_2"
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:textSize="12sp"
+                android:id="@+id/tv_ci1_take"
+                android:gravity="center"
+                android:text="200"
+                android:layout_width="30dp"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:src="@drawable/img_c1_3"
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:textSize="12sp"
+                android:id="@+id/tv_ci1_send"
+                android:gravity="center"
+                android:text="200"
+                android:layout_width="30dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:background="#EEEEEE"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+
+</LinearLayout>

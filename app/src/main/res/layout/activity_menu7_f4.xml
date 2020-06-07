@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="#eee"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".f4menu.Menu7F4">
+
+    <!--标题栏-->
+    <androidx.appcompat.widget.Toolbar
+        app:contentInsetEnd="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetLeft="0dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="20sp"
+                android:text="设置"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="1dp"
+                android:background="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="14sp"
+                    android:gravity="left|center"
+                    android:text="个性"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/right"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="1dp"
+                android:background="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="14sp"
+                    android:gravity="left|center"
+                    android:text="通知"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/right"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="1dp"
+                android:background="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="14sp"
+                    android:gravity="left|center"
+                    android:text="隐私"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/right"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="1dp"
+                android:background="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="14sp"
+                    android:gravity="left|center"
+                    android:text="特权"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/right"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="1dp"
+                android:background="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="14sp"
+                    android:gravity="left|center"
+                    android:text="帮助"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/right"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="1dp"
+                android:background="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/tv_m7f4_changpassword"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="14sp"
+                    android:gravity="left|center"
+                    android:text="修改密码"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/right"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="1dp"
+                android:background="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="14sp"
+                    android:gravity="left|center"
+                    android:text="关于我们"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/right"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#fff"
+                android:layout_marginTop="100dp"
+                android:id="@+id/tv_m7f4_exit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <TextView
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textColor="#c00"
+                    android:text="退出登录"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

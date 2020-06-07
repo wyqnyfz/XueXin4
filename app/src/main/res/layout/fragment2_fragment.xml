@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.Fragment2">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--标题栏-->
+        <androidx.appcompat.widget.Toolbar
+            app:contentInsetEnd="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetLeft="0dp"
+            android:background="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_f2_search"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/search"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+                <TextView
+                    android:textSize="20sp"
+                    android:text="生活"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:layout_margin="5dp"
+                    android:src="@drawable/menu"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout_f2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlAccentColor="#00000000"
+            app:srlPrimaryColor="#00000000"
+            app:srlEnablePreviewInEditMode="true">
+            <com.scwang.smartrefresh.header.BezierCircleHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:background="@drawable/style_bg"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!--这个view的子view,有app:layout_scrollFlags="scroll|enterAlways"就可以折叠-->
+                    <com.google.android.material.appbar.AppBarLayout
+                        android:background="@drawable/style_bar_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!--&lt;!&ndash;5种方式&ndash;&gt;-->
+                        <!--<LinearLayout-->
+                            <!--android:background="@drawable/style_all"-->
+                            <!--app:layout_scrollFlags="scroll|enterAlways"-->
+                            <!--android:orientation="horizontal"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="100dp">-->
+                            <!--<LinearLayout-->
+                                <!--android:layout_weight="1"-->
+                                <!--android:orientation="vertical"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="match_parent">-->
+                                <!--<ImageView-->
+                                    <!--android:layout_weight="1"-->
+                                    <!--android:layout_margin="14dp"-->
+                                    <!--android:src="@drawable/img_f2_1"-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="match_parent" />-->
+                                <!--<TextView-->
+                                    <!--android:text="考研资讯"-->
+                                    <!--android:textSize="10sp"-->
+                                    <!--android:gravity="center"-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="wrap_content" />-->
+                            <!--</LinearLayout>-->
+                            <!--<LinearLayout-->
+                                <!--android:layout_weight="1"-->
+                                <!--android:orientation="vertical"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="match_parent">-->
+                                <!--<ImageView-->
+                                    <!--android:layout_weight="1"-->
+                                    <!--android:layout_margin="14dp"-->
+                                    <!--android:src="@drawable/img_f2_2"-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="match_parent" />-->
+                                <!--<TextView-->
+                                    <!--android:text="竞赛"-->
+                                    <!--android:textSize="10sp"-->
+                                    <!--android:gravity="center"-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="wrap_content" />-->
+                            <!--</LinearLayout>-->
+                            <!--<LinearLayout-->
+                                <!--android:layout_weight="1"-->
+                                <!--android:orientation="vertical"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="match_parent">-->
+                                <!--<ImageView-->
+                                    <!--android:layout_weight="1"-->
+                                    <!--android:layout_margin="14dp"-->
+                                    <!--android:src="@drawable/img_f2_3"-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="match_parent" />-->
+                                <!--<TextView-->
+                                    <!--android:text="出国留学"-->
+                                    <!--android:textSize="10sp"-->
+                                    <!--android:gravity="center"-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="wrap_content" />-->
+                            <!--</LinearLayout>-->
+                            <!--<LinearLayout-->
+                                <!--android:layout_weight="1"-->
+                                <!--android:orientation="vertical"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="match_parent">-->
+                                <!--<ImageView-->
+                                    <!--android:layout_weight="1"-->
+                                    <!--android:layout_margin="14dp"-->
+                                    <!--android:src="@drawable/img_f2_4"-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="match_parent" />-->
+                                <!--<TextView-->
+                                    <!--android:text="考证"-->
+                                    <!--android:textSize="10sp"-->
+                                    <!--android:gravity="center"-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="wrap_content" />-->
+                            <!--</LinearLayout>-->
+                            <!--<LinearLayout-->
+                                <!--android:layout_weight="1"-->
+                                <!--android:orientation="vertical"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="match_parent">-->
+                                <!--<ImageView-->
+                                    <!--android:layout_weight="1"-->
+                                    <!--android:layout_margin="14dp"-->
+                                    <!--android:src="@drawable/img_f2_5"-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="match_parent" />-->
+                                <!--<TextView-->
+                                    <!--android:text="实习兼职"-->
+                                    <!--android:textSize="10sp"-->
+                                    <!--android:gravity="center"-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="wrap_content" />-->
+                            <!--</LinearLayout>-->
+                        <!--</LinearLayout>-->
+
+
+                    </com.google.android.material.appbar.AppBarLayout>
+
+
+                    <!--RecyclerView的列表-->
+                    <!--AndroidX要使用：app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"才行-->
+                    <androidx.recyclerview.widget.RecyclerView
+                        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+                        android:layout_marginTop="4dp"
+                        android:id="@+id/recycler_view_f2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            </LinearLayout>
+            <com.scwang.smartrefresh.layout.footer.BallPulseFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

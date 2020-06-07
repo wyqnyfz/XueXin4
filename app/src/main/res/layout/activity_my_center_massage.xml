@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".f4.MyCenterMassage">
+
+    <androidx.appcompat.widget.Toolbar
+        app:contentInsetEnd="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetLeft="0dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="20sp"
+                android:text="我的动态"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_marginTop="2dp"
+                android:background="#FFFFFF"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_margin="10dp"
+                    android:id="@+id/img_cm_photo"
+                    android:src="@drawable/img_add"
+                    android:layout_gravity="center"
+                    app:riv_oval="true"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+                <LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/tv_cm_neckname"
+                            android:gravity="left|center"
+                            android:layout_weight="1"
+                            android:hint="昵称"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                    <TextView
+                        android:textSize="10sp"
+                        android:id="@+id/tv_cm_signature"
+                        android:gravity="left|center"
+                        android:text="个性签名"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="2dp"
+                android:background="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:id="@+id/tv_cm_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <TextView
+                android:background="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+            <View
+                android:background="#eeeeee"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+            <LinearLayout
+                android:background="#FFFFFF"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <ImageView
+                    android:scaleType="fitXY"
+                    android:layout_margin="4dp"
+                    android:id="@+id/iv_cm_img1"
+                    android:layout_weight="1"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:scaleType="fitXY"
+                    android:layout_margin="4dp"
+                    android:id="@+id/iv_cm_img2"
+                    android:layout_weight="1"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:scaleType="fitXY"
+                    android:layout_margin="4dp"
+                    android:id="@+id/iv_cm_img3"
+                    android:layout_weight="1"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="2dp"
+                android:background="#FFFFFF"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tv_cm_zan"
+                        android:gravity="right|center"
+                        android:layout_weight="1"
+                        android:text="200+"
+                        android:textSize="10sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                    <ImageView
+                        android:id="@+id/iv_cm_dianzan"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/dianzan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tv_cm_ping"
+                        android:gravity="right|center"
+                        android:layout_weight="1"
+                        android:text="100+"
+                        android:textSize="10sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                    <ImageView
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/pinglun"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tv_cm_zhuan"
+                        android:gravity="right|center"
+                        android:layout_weight="1"
+                        android:text="50+"
+                        android:textSize="10sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                    <ImageView
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/zhuanfa"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:background="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

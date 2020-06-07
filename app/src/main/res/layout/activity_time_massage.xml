@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".time.TimeMassage">
+
+    <!--标题栏-->
+    <androidx.appcompat.widget.Toolbar
+        app:contentInsetEnd="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetLeft="0dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="20sp"
+                android:text="比赛详情"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:id="@+id/tv_tm_title"
+                android:textColor="#a0a"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="标题"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+        </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:gravity="center"
+                            android:text="比赛内容:"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp" />
+                        <View
+                            android:background="#0ff"
+                            android:layout_width="100dp"
+                            android:layout_height="1dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/tv_tm_time"
+                            android:gravity="right|center"
+                            android:text="2020.2.1-2020.3.20"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_margin="10dp"
+                    android:id="@+id/tv_tm_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:text="2020.2.1-2020.3.20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

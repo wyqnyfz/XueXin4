@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragment1"
+   >
+    <fragment
+        android:id="@+id/fragment1"
+        android:name="com.coolweather.xuexin3.fragments.Fragment1"
+        android:label="学习"
+        tools:layout="@layout/fragment1_fragment" />
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.coolweather.xuexin3.fragments.Fragment2"
+        android:label="圈子"
+        tools:layout="@layout/fragment2_fragment" />
+    <fragment
+        android:id="@+id/fragment3"
+        android:name="com.coolweather.xuexin3.fragments.Fragment3"
+        android:label="消息"
+        tools:layout="@layout/fragment3_fragment" />
+    <fragment
+        android:id="@+id/fragment4"
+        android:name="com.coolweather.xuexin3.fragments.Fragment4"
+        android:label="个人中心"
+        tools:layout="@layout/fragment4_fragment" />
+</navigation>

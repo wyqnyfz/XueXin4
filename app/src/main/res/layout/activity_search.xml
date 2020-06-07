@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:background="@drawable/style_bg"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".search.Search">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!--标题栏-->
+        <LinearLayout
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:background="#eeeeee"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <LinearLayout
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <ImageView
+                    android:id="@+id/img_s1_search"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/search" />
+                <EditText
+                    android:id="@+id/et_s1_search"
+                    android:textSize="14sp"
+                    android:gravity="left|center"
+                    android:layout_width="match_parent"
+                    android:layout_height="59dp"
+                    android:layout_weight="1"
+                    android:hint="如果想考研，请听老学长一席话..." />
+            </LinearLayout>
+        </LinearLayout>
+        <!--广告-->
+        <ImageView
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:adjustViewBounds="true"
+            android:src="@drawable/img_s_img1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <!--记录-->
+        <LinearLayout
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:background="#ffffff"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <TextView
+                    android:gravity="left|center"
+                    android:layout_weight="1"
+                    android:text="搜索记录"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_margin="2dp"
+                    android:src="@drawable/img_s_img2"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--热搜-->
+        <TextView
+            android:background="#eeeeee"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:text="热搜榜"
+            android:gravity="left|center"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+        <!--列表-->
+        <LinearLayout
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <TextView
+                android:textColor="#ff0000"
+                android:text="1"
+                android:gravity="center"
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+            <TextView
+                android:gravity="left|center"
+                android:text="陈梦女单夺冠"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <TextView
+                android:textColor="#ff0000"
+                android:text="2"
+                android:gravity="center"
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+            <TextView
+                android:gravity="left|center"
+                android:text="纽约州紧急状态"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <TextView
+                android:textColor="#ff0000"
+                android:text="3"
+                android:gravity="center"
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+            <TextView
+                android:gravity="left|center"
+                android:text="梅西进球超越C罗"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <TextView
+                android:textColor="#0000ff"
+                android:text="4"
+                android:gravity="center"
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+            <TextView
+                android:gravity="left|center"
+                android:text="吉林东北虎豹影像"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <TextView
+                android:textColor="#0000ff"
+                android:text="5"
+                android:gravity="center"
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+            <TextView
+                android:gravity="left|center"
+                android:text="沙特国王弟弟被捕"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <TextView
+                android:textColor="#0000ff"
+                android:text="6"
+                android:gravity="center"
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+            <TextView
+                android:gravity="left|center"
+                android:text="武汉东湖樱园樱花"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <TextView
+                android:textColor="#0000ff"
+                android:text="7"
+                android:gravity="center"
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+            <TextView
+                android:gravity="left|center"
+                android:text="钟南山给孩子回信"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
