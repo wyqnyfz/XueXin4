@@ -79,32 +79,34 @@
         android:layout_width="match_parent"
         android:layout_height="150dp">
         <ImageView
-            android:padding="5dp"
+            android:layout_margin="3dp"
             android:scaleType="centerCrop"
             android:id="@+id/iv_aa_img1"
-            android:layout_margin="20dp"
             android:src="@drawable/img_addimage"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+        <TextView
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
         <ImageView
-            android:padding="5dp"
+            android:layout_margin="3dp"
             android:scaleType="centerCrop"
             android:id="@+id/iv_aa_img2"
-            android:layout_margin="20dp"
             android:src="@drawable/img_addimage"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+        <TextView
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
         <ImageView
-            android:padding="5dp"
+            android:layout_margin="3dp"
             android:scaleType="centerCrop"
             android:id="@+id/iv_aa_img3"
-            android:layout_margin="20dp"
             android:src="@drawable/img_addimage"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
     </LinearLayout>
 
 </LinearLayout>

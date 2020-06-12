@@ -13,6 +13,7 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.coolweather.xuexin3.MainActivity;
@@ -57,12 +58,14 @@ public class StartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //隐藏bar
+        ActionBar actionBar = getSupportActionBar();
+        if(actionBar!=null){
+            actionBar.hide();
+        }
 
         getPermission();
-//        //申请权限
-//        if (!ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.INTERNET)){
-//            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.INTERNET},66);
-//        }
+
         new Thread(new Runnable() {
             @Override
             public void run() {

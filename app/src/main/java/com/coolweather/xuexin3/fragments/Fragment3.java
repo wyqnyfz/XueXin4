@@ -24,6 +24,7 @@ import com.coolweather.xuexin3.R;
 import com.coolweather.xuexin3.f3.Item3Adapter;
 import com.coolweather.xuexin3.f3.ItemF3;
 import com.coolweather.xuexin3.search.Search;
+import com.coolweather.xuexin3.socket.ChatActivity;
 import com.coolweather.xuexin3.socket.FriendData;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
@@ -31,6 +32,8 @@ import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static androidx.constraintlayout.widget.Constraints.TAG;
 
 public class Fragment3 extends Fragment {
 
@@ -81,8 +84,6 @@ public class Fragment3 extends Fragment {
     }
 
 
-
-
     private void init() {
         new Thread(new Runnable() {
             @Override
@@ -108,7 +109,15 @@ public class Fragment3 extends Fragment {
         mListAdapter.setOnitemClickLintener(new Item3Adapter.OnitemClick() {
             @Override
             public void onItemClick(int position) {
-                Toast.makeText(getContext(), "这是"+position, Toast.LENGTH_SHORT).show();
+                if(position > 3){
+                    FriendData friendData = MyData.sBasicData.guanZhuList.get(position-4);
+
+                    Intent intent = new Intent(getContext(), ChatActivity.class);
+                    intent.putExtra("friend_id", friendData.getId());
+                    intent.putExtra("friend_name", friendData.getNickName());
+                    intent.putExtra("friend_img", friendData.getPhoto());
+                    startActivity(intent);
+                }
             }
         });
 
@@ -123,18 +132,13 @@ public class Fragment3 extends Fragment {
         mList.addAll(MyData.listF3); //不能用等于号
 
     }
+
     private void initRecycleView() {
         RecyclerView recyclerView = mView.findViewById(R.id.recycler_view_f3);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mView.getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
         mListAdapter = new Item3Adapter(mList);
         recyclerView.setAdapter(mListAdapter);
-    }
-    //列表更新，由看不见变为可见是调用
-    public void onResume() {
-        super.onResume();
-        initDatas();
-        mListAdapter.notifyDataSetChanged();        //更新说明
     }
 
 
@@ -154,8 +158,8 @@ public class Fragment3 extends Fragment {
             @Override
             public void onRefresh(RefreshLayout refreshlayout) {
                 mList.clear();
-                initDatas();
-                mListAdapter.notifyDataSetChanged();
+//                initDatas();
+//                mListAdapter.notifyDataSetChanged();
                 refreshlayout.finishRefresh();
             }
         });
@@ -165,7 +169,7 @@ public class Fragment3 extends Fragment {
             public void onLoadmore(RefreshLayout refreshlayout) {
 //                mList.add(MyData.listF3.get(5));
 //                mListAdapter.notifyDataSetChanged();
-//                refreshlayout.finishLoadmore();
+                refreshlayout.finishLoadmore();
             }
         });
 

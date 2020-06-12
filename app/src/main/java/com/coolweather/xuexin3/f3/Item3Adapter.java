@@ -61,7 +61,11 @@ public class Item3Adapter extends RecyclerView.Adapter<Item3Adapter.ViewHolder> 
         }else {
             Glide.with(mView.getContext()).load(p.img).into(holder.img);
         }
-        holder.name.setText(p.name);
+        if("".equals(p.name)|| p.name==null){
+            holder.name.setText("好友");
+        }else {
+            holder.name.setText(p.name);
+        }
         holder.time.setText(p.time);
         if(p.massage.length()>10){
             holder.massage.setText(p.massage.substring(0, 10)+"...");

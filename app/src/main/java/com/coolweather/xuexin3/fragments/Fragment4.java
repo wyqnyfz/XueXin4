@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
@@ -47,6 +48,7 @@ public class Fragment4 extends Fragment {
     }
 
     private void init() {
+
         mName = mView.findViewById(R.id.tv_f4_name);
         mRoundedImageView = mView.findViewById(R.id.img_f4_img);
         initData();
