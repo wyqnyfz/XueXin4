@@ -73,6 +73,7 @@ public class ChatMessageAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         ChatMessage mChatMessage = mChatMessageList.get(i);
         String content = mChatMessage.getContent();
+        String t = mChatMessage.getDateTime();
         String time = formatTime(mChatMessage.getDateTime());
         int fromId = mChatMessage.getFromUserId().intValue();
         int toId = mChatMessage.getToUserId().intValue();

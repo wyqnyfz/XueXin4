@@ -25,17 +25,27 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageButton;
 
 import com.coolweather.xuexin3.MyData;
+import com.coolweather.xuexin3.MyUtils;
 import com.coolweather.xuexin3.R;
 import com.google.gson.Gson;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.litepal.LitePal;
+import org.litepal.crud.LitePalSupport;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 
 public class ChatActivity extends AppCompatActivity implements View.OnClickListener{
@@ -104,11 +114,12 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
         mContext=ChatActivity.this;
-//隐藏bar
+        //隐藏bar
         ActionBar actionBar = getSupportActionBar();
         if(actionBar!=null){
             actionBar.hide();
         }
+
         //状态栏颜色
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
@@ -127,6 +138,8 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
         doRegisterReceiver();  //注册广播
 
         initView();
+
+        initData();
 
         new Thread(new Runnable() {
             @Override
@@ -159,6 +172,8 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
         String msg = new Gson().toJson(bean);
         Log.i(TAG, "register: "+msg);
         jWebSClientService.sendMsg(msg);
+
+        getCacheMsg();
     }
 
     static class RegisterBean{
@@ -189,6 +204,51 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
         public void setDateTime(String dateTime) {
             this.dateTime = dateTime;
         }
+    }
+
+    /**
+     * 获取自己未在线时收到的信息
+     * 服务器在收到get请求之后，通过socket将缓存的消息发送回来
+     */
+    public void getCacheMsg(){
+        OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder()
+                .url(MyUtils.getChatMsgUrl+MyData.sBasicData.id)
+                .get()
+                .build();
+
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                Log.e(TAG, "onFailure: 服务器故障！" );
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                int code = response.code();
+                Log.d(TAG, "onResponse: code="+code);
+                String responseContent = response.body().string();
+                Log.d(TAG, "onResponse: responseContent="+responseContent);
+
+                if(code == 200){
+
+                }
+            }
+        });
+    }
+
+    /**
+     * 从本地读取消息记录
+     */
+    public void initData(){
+        List<ChatMessage>  msgList = LitePal.findAll(ChatMessage.class);  //将本地的消息记录读取到msgList中
+        for(ChatMessage msg : msgList){
+            if((msg.getFromUserId()==contactId && msg.getToUserId()==MyData.sBasicData.id)
+            || (msg.getToUserId()==contactId && msg.getFromUserId()==MyData.sBasicData.id)){  //如果是用户和当前聊天好友互发的消息，则读取到chatMessageList中
+                chatMessageList.add(msg);
+            }
+        }
+        initChatMsgListView();
     }
 
     /**
@@ -285,6 +345,7 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
                     chatMessage.setDateTime(System.currentTimeMillis()+"");
                     chatMessage.setType(WSUtil.MSG_TYPE);
 
+                    chatMessage.save();
 
                     String msg = new Gson().toJson(chatMessage);
                     jWebSClientService.sendMsg(msg);

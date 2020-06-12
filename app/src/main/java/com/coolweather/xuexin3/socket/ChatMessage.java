@@ -1,6 +1,8 @@
 package com.coolweather.xuexin3.socket;
 
-public class ChatMessage {
+import org.litepal.crud.LitePalSupport;
+
+public class ChatMessage extends LitePalSupport {
     private Integer fromUserId;
     private Integer toUserId;
     private String content;
