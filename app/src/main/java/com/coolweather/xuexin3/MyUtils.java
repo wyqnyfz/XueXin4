@@ -104,6 +104,8 @@ public class MyUtils {
     //粉丝数量
     private static final String URL_24_2 = "http://121.36.5.207:8081/focus/selectFans?yid=";
 
+    public static final String getChatMsgUrl = "http://121.36.5.207:8081/getCacheMessage?yid=";
+
 
     /**
      * header

@@ -8,6 +8,8 @@ import android.os.IBinder;
 import android.util.Log;
 
 
+import com.google.gson.Gson;
+
 import org.java_websocket.handshake.ServerHandshake;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -80,6 +82,10 @@ public class JWebSocketClientService extends Service {
 
 
                 if(!type.equals("REGISTER")){  //如果接收到的不是注册信道时的返回信息，即接收到的信息为用户聊天信息
+
+                    ChatMessage chatMessage = new Gson().fromJson(data, ChatMessage.class);
+                    chatMessage.save();  //消息的本地存储
+
                     Intent intent = new Intent();
                     intent.setAction("com.xch.servicecallback.content");
                     intent.putExtra("message", message);
