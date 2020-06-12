@@ -104,7 +104,6 @@ public class TimeLine extends AppCompatActivity {
                 popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
-                        Toast.makeText(TimeLine.this, item.getTitle(), Toast.LENGTH_SHORT).show();
                         switch (item.getItemId()){
                             case R.id.menu_bisai_1:
                                 Toast.makeText(TimeLine.this, "闹钟添加成功", Toast.LENGTH_SHORT).show();

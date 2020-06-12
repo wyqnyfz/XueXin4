@@ -1073,7 +1073,7 @@ public class MyUtils {
             public void onResponse(Call call, Response response) throws IOException {
                 Log.d(TAG, "评论请求成功！");
                 int t = response.code();
-                Log.d(TAG, "code-------------------"+t);
+                Log.d(TAG, "code---"+t);
                 if(t == 200){
                     String s2 = response.body().string();
                     Log.d(TAG, s2);
@@ -1090,7 +1090,7 @@ public class MyUtils {
 
 
     /**
-     * 获取粉丝和关注
+     * 获取关注
      */
     public static void post_24(Handler handler){
         OkHttpClient okHttpClient = new OkHttpClient().newBuilder().build();
@@ -1123,7 +1123,9 @@ public class MyUtils {
         });
     }
 
-
+    /**
+     * 获取粉丝
+     */
     public static void post_24_2(Handler handler){
         mHandler = handler;
         OkHttpClient okHttpClient = new OkHttpClient().newBuilder().build();
@@ -1147,6 +1149,7 @@ public class MyUtils {
                     ResFenSiGuanZhu resFenSiGuanZhu = new Gson().fromJson(response.body().string(), ResFenSiGuanZhu.class);
                     for(ResFenSiGuanZhu.DataBean.ListBean e : resFenSiGuanZhu.getData().getList()){
                         MyData.sBasicData.fenSiList.add(new FriendData(e.getId(),e.getNickName(),e.getSignature(),e.getGender(),e.getPhone(),e.getPassword(),e.getSchool(),e.getMajor(),e.getPhoto()));
+
                     }
                     sentHanderMassage(2, 1);
                 }

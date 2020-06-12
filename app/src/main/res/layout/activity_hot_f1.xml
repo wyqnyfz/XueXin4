@@ -193,7 +193,7 @@
                         android:id="@+id/tv_hf_zhuan"
                         android:gravity="right|center"
                         android:layout_weight="1"
-                        android:text="50+"
+                        android:text="0"
                         android:textSize="10sp"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"/>

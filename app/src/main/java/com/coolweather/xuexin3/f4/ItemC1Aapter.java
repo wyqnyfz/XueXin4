@@ -79,6 +79,9 @@ public class ItemC1Aapter extends RecyclerView.Adapter<ItemC1Aapter.ViewHolder> 
         if(imgs.length>=1){
             Glide.with(mView.getContext()).load(imgs[0]).into(holder.img1);
         }
+        holder.dianzan.setText(p.likeAmount+"");
+        holder.pinglun.setText(p.leaveAmount+"");
+        holder.zhuanfa.setText("0");
 
         if (onitemClick != null) {
             holder.mLinearLayout.setOnClickListener(new View.OnClickListener() {

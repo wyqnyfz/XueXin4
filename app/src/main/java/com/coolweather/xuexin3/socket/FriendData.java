@@ -36,6 +36,12 @@ public class FriendData {
         this.photo = photo;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        FriendData f = (FriendData) obj;
+        return id==f.id;
+    }
+
     public int getId() {
         return id;
     }

@@ -1,5 +1,6 @@
 package com.coolweather.xuexin3.hot;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
@@ -66,6 +67,7 @@ public class HotF1 extends AppCompatActivity {
 
     private int mPosition=-1;
 
+    @SuppressLint("HandlerLeak")
     Handler mHandler = new Handler(){
         @Override
         public void handleMessage(@NonNull Message msg) {
@@ -211,8 +213,8 @@ public class HotF1 extends AppCompatActivity {
                     MyUtils.post_21(mHandler,mSeletDatas.id);
                 }
             }).start();
-
         }
+
         mNameTv = findViewById(R.id.tv_hf_name);
         mNameTv.setText(mName);
 
@@ -232,6 +234,10 @@ public class HotF1 extends AppCompatActivity {
         mSend = findViewById(R.id.bt_hf_send);
 
         list=new ArrayList<>();
+
+        if(mName.equals("我的动态")){
+            mGuanzhu.setVisibility(View.GONE);
+        }
 
         Glide.with(this).load(mSeletDatas.photo).into(mPhoto);
         mNeckname.setText(mSeletDatas.nickName);

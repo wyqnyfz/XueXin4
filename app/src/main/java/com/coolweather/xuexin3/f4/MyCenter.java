@@ -20,6 +20,7 @@ import com.bumptech.glide.Glide;
 import com.coolweather.xuexin3.MyData;
 import com.coolweather.xuexin3.MyUtils;
 import com.coolweather.xuexin3.R;
+import com.coolweather.xuexin3.hot.HotF1;
 import com.coolweather.xuexin3.resultData.SeletDatas;
 import com.makeramen.roundedimageview.RoundedImageView;
 
@@ -118,9 +119,15 @@ public class MyCenter extends AppCompatActivity {
             @Override
             public void onItemClick(int position) {
 //                Toast.makeText(mView.getContext(),"点击了一下"+position,Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MyCenter.this, MyCenterMassage.class);
+
+                Intent intent = new Intent(MyCenter.this, HotF1.class);
                 intent.putExtra("id", position);
+                intent.putExtra("name", "我的动态");
                 startActivity(intent);
+
+//                Intent intent = new Intent(MyCenter.this, MyCenterMassage.class);
+//                intent.putExtra("id", position);
+//                startActivity(intent);
             }
         });
 

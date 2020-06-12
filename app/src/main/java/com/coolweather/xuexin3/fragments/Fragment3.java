@@ -57,6 +57,12 @@ public class Fragment3 extends Fragment {
                             Log.d("------------", ""+e.getNickName());
                             mList.add(new ItemF3(e.getPhoto(), e.getNickName(), "", ""));
                         }
+                        for(FriendData e : MyData.sBasicData.fenSiList){
+                            Log.d("------------", ""+e.getNickName());
+                            if(!MyData.sBasicData.guanZhuList.contains(e)){
+                                mList.add(new ItemF3(e.getPhoto(), e.getNickName(), "", ""));
+                            }
+                        }
                         mListAdapter.notifyDataSetChanged();        //更新说明
                     }
                     break;
